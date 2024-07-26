@@ -1,0 +1,162 @@
+
+const Post = () => {
+    return (
+        <div className="flex  flex-row justify-around gap-12  bg-gray-200">
+
+            {/* left section */}
+            <div className="left-section justify-center flex basis-4/5 gap-4 flex-wrap">
+
+                <div className="post-parent mt-3">
+                    <div className="post-img">
+                        <img src="https://media.istockphoto.com/id/1147822631/photo/skyline-of-downtown-frankfurt-am-main-germany.jpg?s=1024x1024&w=is&k=20&c=gb8X9TS0LfCTvwnSPGWz2nJhyPChbSvDP4BPdSbkdO0=" alt="" />
+                    </div>
+                    <p className="mt-2 font-semibold hover:text-orange-500 leading-5 mb-4 cursor-pointer">Rabit is building an AI Model that understands how software works.</p>
+                    <div className="user-parent">
+                        <div className="user-img-parent">
+                            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
+                        </div>
+                        <p className="text-sm">UserName</p>
+                    </div>
+                    <div className="text-sm">
+                        Published: October 4, 2023
+                    </div>
+                </div>
+                <div className="post-parent mt-3">
+                    <div className="post-img">
+                        <img src="https://media.istockphoto.com/id/1147822631/photo/skyline-of-downtown-frankfurt-am-main-germany.jpg?s=1024x1024&w=is&k=20&c=gb8X9TS0LfCTvwnSPGWz2nJhyPChbSvDP4BPdSbkdO0=" alt="" />
+                    </div>
+                    <p className="mt-2 font-semibold hover:text-orange-500 cursor-pointer">Rabit is building an AI Model that understands how software works.</p>
+                    <div className="user-parent">
+                        <div className="user-img-parent">
+                            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
+                        </div>
+                        <p>UserName</p>
+                    </div>
+                    <div>
+                        Published: October 4, 2023
+                    </div>
+                </div>
+                <div className="post-parent mt-3">
+                    <div className="post-img">
+                        <img src="https://media.istockphoto.com/id/1147822631/photo/skyline-of-downtown-frankfurt-am-main-germany.jpg?s=1024x1024&w=is&k=20&c=gb8X9TS0LfCTvwnSPGWz2nJhyPChbSvDP4BPdSbkdO0=" alt="" />
+                    </div>
+                    <p className="mt-2 font-semibold hover:text-orange-500 cursor-pointer">Rabit is building an AI Model that understands how software works.</p>
+                    <div className="user-parent">
+                        <div className="user-img-parent">
+                            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
+                        </div>
+                        <p>UserName</p>
+                    </div>
+                    <div>
+                        Published: October 4, 2023
+                    </div>
+                </div>
+                <div className="post-parent mt-3">
+                    <div className="post-img">
+                        <img src="https://media.istockphoto.com/id/1147822631/photo/skyline-of-downtown-frankfurt-am-main-germany.jpg?s=1024x1024&w=is&k=20&c=gb8X9TS0LfCTvwnSPGWz2nJhyPChbSvDP4BPdSbkdO0=" alt="" />
+                    </div>
+                    <p className="mt-2 font-semibold hover:text-orange-500 cursor-pointer">Rabit is building an AI Model that understands how software works.</p>
+                    <div className="user-parent">
+                        <div className="user-img-parent">
+                            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
+                        </div>
+                        <p>UserName</p>
+                    </div>
+                    <div>
+                        Published: October 4, 2023
+                    </div>
+                </div>
+                <div className="post-parent mt-3">
+                    <div className="post-img">
+                        <img src="https://media.istockphoto.com/id/1147822631/photo/skyline-of-downtown-frankfurt-am-main-germany.jpg?s=1024x1024&w=is&k=20&c=gb8X9TS0LfCTvwnSPGWz2nJhyPChbSvDP4BPdSbkdO0=" alt="" />
+                    </div>
+                    <p className="mt-2 font-semibold hover:text-orange-500 cursor-pointer">Rabit is building an AI Model that understands how software works.</p>
+                    <div className="user-parent">
+                        <div className="user-img-parent">
+                            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
+                        </div>
+                        <p>UserName</p>
+                    </div>
+                    <div>
+                        Published: October 4, 2023
+                    </div>
+                </div>
+                <div className="post-parent mt-3">
+                    <div className="post-img">
+                        <img src="https://media.istockphoto.com/id/1147822631/photo/skyline-of-downtown-frankfurt-am-main-germany.jpg?s=1024x1024&w=is&k=20&c=gb8X9TS0LfCTvwnSPGWz2nJhyPChbSvDP4BPdSbkdO0=" alt="" />
+                    </div>
+                    <p className="mt-2 font-semibold hover:text-orange-500 cursor-pointer">Rabit is building an AI Model that understands how software works.</p>
+                    <div className="user-parent">
+                        <div className="user-img-parent">
+                            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
+                        </div>
+                        <p>UserName</p>
+                    </div>
+                    <div>
+                        Published: October 4, 2023
+                    </div>
+                </div>
+                <div className="post-parent mt-3">
+                    <div className="post-img">
+                        <img src="https://media.istockphoto.com/id/1147822631/photo/skyline-of-downtown-frankfurt-am-main-germany.jpg?s=1024x1024&w=is&k=20&c=gb8X9TS0LfCTvwnSPGWz2nJhyPChbSvDP4BPdSbkdO0=" alt="" />
+                    </div>
+                    <p className="mt-2 font-semibold hover:text-orange-500 cursor-pointer">Rabit is building an AI Model that understands how software works.</p>
+                    <div className="user-parent">
+                        <div className="user-img-parent">
+                            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
+                        </div>
+                        <p>UserName</p>
+                    </div>
+                    <div>
+                        Published: October 4, 2023
+                    </div>
+                </div>
+
+            </div>
+
+
+            {/* right section */}
+            <div className="right-section flex flex-col items-center ">
+                <h1 className="text-3xl mb-4 mt-6">Latest Blog</h1>
+                <div>
+                    <div>
+                        <p className=" w-[70%] mx-auto mb-2">Rainforest raises $8.5M to help software companies embed financial services, payment</p>
+                        <div className="  w-[70%] mx-auto">
+                            <button className="font-semibold cursor-pointer hover:text-orange-500">Read Now <i class="fa-solid fa-arrow-right"></i> </button>
+                        </div>
+                    </div>
+                <div id="lbb"></div>
+                </div>
+                <div>
+                    <div>
+                        <p className=" w-[70%] mx-auto mb-2">Rainforest raises $8.5M to help software companies embed financial services, payment</p>
+                        <div className="  w-[70%] mx-auto">
+                            <button className="font-semibold cursor-pointer hover:text-orange-500">Read Now <i class="fa-solid fa-arrow-right"></i> </button>
+                        </div>
+                    </div>
+                <div id="lbb"></div>
+                </div>
+                <div>
+                    <div>
+                        <p className=" w-[70%] mx-auto mb-2">Rainforest raises $8.5M to help software companies embed financial services, payment</p>
+                        <div className="  w-[70%] mx-auto">
+                            <button className="font-semibold cursor-pointer hover:text-orange-500">Read Now <i class="fa-solid fa-arrow-right"></i> </button>
+                        </div>
+                    </div>
+                <div id="lbb"></div>
+                </div>
+                <div>
+                    <div>
+                        <p className=" w-[70%] mx-auto mb-2">Rainforest raises $8.5M to help software companies embed financial services, payment</p>
+                        <div className="  w-[70%] mx-auto">
+                            <button className="font-semibold cursor-pointer hover:text-orange-500">Read Now <i class="fa-solid fa-arrow-right"></i> </button>
+                        </div>
+                    </div>
+                <div id="lbb"></div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Post;

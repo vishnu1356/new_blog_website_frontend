@@ -1,0 +1,122 @@
+.icon{
+    display: none!important;
+  }
+  
+  /* for navbar */
+#bb {
+    border: 1px solid #f97316;
+}
+
+/* #bbt {
+    border: 1px solid black;
+} */
+
+.post-parent {
+    height: 300px;
+    width: 250px;
+    padding: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.post-parent:hover {
+    box-shadow: 5px 5px 15px grey;
+    transition: all ease-in-out 0.5s;
+}
+
+.post-title {
+    color: orange;
+}
+
+.post-img {
+    height: 130px;
+    width: 230px;
+}
+
+
+.post-img  > img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.user-parent {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.user-img-parent {
+    height: 30px;
+    width: 30px;
+}
+
+.user-img-parent > img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+#lbb {
+    background-color: #f97316;
+    height: 1px;
+    width: 80%;
+    margin: 5px auto;
+}
+
+
+
+
+
+/* detail page */
+
+
+.detail-page {
+  background-color: gray;
+  height: 100px;
+  width: 60%;
+  margin: 3rem auto;
+}
+  /* Extra small devices (phones, 576px and down) */
+  @media (max-width: 576px) {
+    /* Styles for small screens */
+    .icon{
+      display: block!important;
+    }
+  
+  }
+  
+  /* Small devices (portrait tablets and small desktops, 576px and up) */
+  @media (min-width: 576px) and (max-width: 768px) {
+    /* Styles for medium screens */
+    .icon{
+      display: block!important;
+    }
+  
+  }
+  
+  /* Medium devices (landscape tablets and medium desktops, 768px and up) */
+  @media (min-width: 768px) and (max-width: 992px) {
+    /* Styles for large screens */
+  
+    .icon{
+      display: block!important;
+    }
+  
+  
+  }
+  
+  /* Large devices (large desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width: 1200px) {
+    /* Styles for extra-large screens */
+  
+  
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    /* Styles for extra-large screens */
+  }
+  
