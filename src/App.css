@@ -74,10 +74,14 @@
 
 
 .detail-page {
-  background-color: gray;
-  height: 100px;
   width: 60%;
   margin: 3rem auto;
+  padding: 30px;
+}
+
+.card-detail {
+  width: inherit;
+  margin: 0 auto;
 }
   /* Extra small devices (phones, 576px and down) */
   @media (max-width: 576px) {
