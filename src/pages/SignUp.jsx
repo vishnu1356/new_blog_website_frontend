@@ -21,7 +21,7 @@ const SignUp = () => {
               className="w-full px-3 py-2 outline-none border rounded focus:outline-none focus:ring-orange-500 focus:border-orange-300"
             />
           </div>
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <label className="block  text-sm font-bold mb-2" htmlFor="image">
                 Upload Image
             </label>
@@ -31,7 +31,7 @@ const SignUp = () => {
                 accept="image/*"
                 className="w-full px-3 py-2 outline-none border rounded focus:outline-none focus:ring-orange-500 focus:border-orange-300"
             />
-            </div>
+            </div> */}
 
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
@@ -56,7 +56,19 @@ const SignUp = () => {
               placeholder="Enter your password"
               className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-orange-500 focus:border-orange-300"
             />
-          </div>
+          </div>   
+          {/* <div className="mb-6">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+            User Type
+            </label>
+            <input
+              type="text"
+              id="usertype"
+
+              placeholder="Enter your password"
+              className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-orange-500 focus:border-orange-300"
+            />
+          </div> */}
           <div className="flex items-center justify-between mb-4">
             <button
               type="submit"
