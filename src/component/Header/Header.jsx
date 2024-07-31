@@ -3,11 +3,16 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 
 import Sidebarcomp from "../Sidebar/Sidebar";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import UserContext from "../../contex/user";
 
 function Header() {
 
   const [isOpen, setIsOPen] = useState(false)
+  const {userData, setUserData} = useContext(UserContext)
+
+
+  // console.log("userData from header", userData)
   return (
     <>
       <header className="bg-black ">

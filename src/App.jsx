@@ -1,22 +1,24 @@
 
-import { Footer } from 'flowbite-react'
 import './App.css'
-import Category from './component/Category/Category'
 import Header from './component/Header/Header'
-import HeroSection from './component/HeroSection/HeroSection'
-import NewsLetter from './component/NewsLetter/NewsLetter'
-import Post from './component/Post/Post'
 import FooterSection from './component/Footer/Footer'
-import SignUp from './pages/SignUp'
-import Home from './pages/Home'
 import AllRoutes from './Routes/AllRoutes'
+import UserContext from './contex/user'
+import { useState } from 'react'
 function App() {
-  return (
-      <>
-            <Header />
-            <AllRoutes />
 
-            <FooterSection />
+  // Here you can add your user data
+
+  const [userData, setUserData] = useState({username:"", email: "", usertype: "", id: ""})
+
+
+  return (
+      <>  
+        <UserContext.Provider value={{userData, setUserData}}>
+          <Header />
+          <AllRoutes />
+          <FooterSection />
+        </UserContext.Provider>
       </>
   )
 }

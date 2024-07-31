@@ -1,8 +1,9 @@
 import axios from "axios";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import toast from "react-hot-toast";
+import UserContext from "../contex/user";
 
 
 const Login = () => {
@@ -11,6 +12,9 @@ const Login = () => {
       email: "",
       password: "",
     })
+
+    const navigator = useNavigate()
+    const {userData, setUserData} = useContext(UserContext)
 
 
     function handleLoginChange (e) {
@@ -28,7 +32,13 @@ const Login = () => {
           })
           const decodedToken = jwtDecode(response.data.jwt)
           console.log("decodedToken", decodedToken);
+          setUserData({...userData, email: decodedToken.email, username: decodedToken.username, usertype: decodedToken.usertype, id: decodedToken.id})
           toast.success("Login successful")
+          setLoginFormData({
+            email: "",
+            password: "",
+          })
+          navigator("/")
 
         }
         catch(err) {
