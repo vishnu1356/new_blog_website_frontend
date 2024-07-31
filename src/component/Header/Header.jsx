@@ -2,15 +2,20 @@
 import { Link } from "react-router-dom";
 import "./Header.css";
 
+import Sidebarcomp from "../Sidebar/Sidebar";
+import { useState } from "react";
+
 function Header() {
 
+  const [isOpen, setIsOPen] = useState(false)
   return (
-    <header className="bg-black ">
+    <>
+      <header className="bg-black ">
       <nav className="px-4 py-4 flex justify-between items-center">
         {/* Left Part */}
         <div className="flex gap-8 items-center">
           <div>
-            <a href="/" className="text-xl font-bold text-white">Blog <span className="text-orange-500">Post</span></a>
+            <p href="/" className="text-xl font-bold text-white cursor-pointer" onClick={() => setIsOPen(!isOpen)}>Blog <span className="text-orange-500">Post</span></p>
           </div>
           <div>
           <input
@@ -25,7 +30,7 @@ function Header() {
         {/* Middle Part */}
 
         <div className=" text-white gap-10 text-xl hidden lg:flex">
-          <p className="hover:text-orange-500">Home</p>
+          <Link to={"/"} className="hover:text-orange-500">Home</Link>
           <p className="hover:text-orange-500">About</p>
           <p className="hover:text-orange-500">Service</p>
           <p className="hover:text-orange-500">Contact</p>
@@ -46,6 +51,10 @@ function Header() {
       </nav>
       <div id="bb"></div>
     </header>
+      {
+        (isOpen) ? <Sidebarcomp /> : ""
+      }
+    </>
   )
 }
 
