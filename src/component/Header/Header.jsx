@@ -12,7 +12,7 @@ function Header() {
   const {userData, setUserData} = useContext(UserContext)
 
 
-  // console.log("userData from header", userData)
+  console.log("userData from header", userData.username.length)
   return (
     <>
       <header className="bg-black ">
@@ -48,7 +48,10 @@ function Header() {
 
 
         <div className="text-white  gap-4 items-center  hidden lg:flex">
-          <Link to={"/signin"} className="px-4 py-2 bg-orange-500 rounded-md">Login</Link>
+          {
+            (userData.username.length == 0) ? <Link to={"/signin"} className="px-4 py-2 bg-orange-500 rounded-md">Login</Link>
+            : ""
+          }
           <Link to={"/signup"} className="px-4 py-2 bg-orange-500 rounded-md">Signup</Link>
         </div>
         <i className="fa-solid block icon fa-bars text-2xl text-white lg:hidden"></i>

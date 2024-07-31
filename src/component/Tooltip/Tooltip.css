@@ -1,0 +1,42 @@
+/* src/Tooltip.css */
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .tooltip-trigger {
+    padding: 10px;
+    background-color: #545454;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+  
+  .tooltip-content {
+    position: absolute;
+    background-color: #545454;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    left: 200%;
+    top: -55%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 1000;
+    display: block;
+  }
+  
+  .tooltip-content::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+  }
+  

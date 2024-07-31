@@ -31,7 +31,6 @@ const Login = () => {
             }
           })
           const decodedToken = jwtDecode(response.data.jwt)
-          console.log("decodedToken", decodedToken);
           setUserData({...userData, email: decodedToken.email, username: decodedToken.username, usertype: decodedToken.usertype, id: decodedToken.id})
           toast.success("Login successful")
           setLoginFormData({
