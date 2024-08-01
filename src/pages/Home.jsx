@@ -28,11 +28,14 @@ const Home = () => {
         <div>
             <HeroSection />
             <Category />
-            {
-                allBlogs && allBlogs.map((blog) => (
-                    <Post  key={blog._id} img={blog.img} id={blog._id} title={blog.title} description={blog.description}/>
-                ))
-            }
+            <div className="flex justify-center g-12 flex-wrap">
+                {
+                    allBlogs && allBlogs.map((blog) => (
+                        <Post  key={blog._id} img={blog.img} id={blog._id} title={blog.title} description={blog.description}/>
+                    ))
+                }
+            </div>
+ 
             <NewsLetter  />
         </div>
     )

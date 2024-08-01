@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 const Post = (props) => {
     const {img, title, description, id} = props;
-    console.log("base url is:", import.meta.env.VITE_IMG_URL)
-    console.log("id is", id)
-    console.log(` full url for image: ${import.meta.env.VITE_IMG_URL}${id}`)
+
     return (
-        <div className="flex  flex-row justify-around gap-12  bg-gray-200">
+        <>
+
+        {/* <div className="flex  flex-row justify-around gap-12  bg-gray-200"> */}
 
             {/* left section */}
-            <div className="left-section justify-center flex basis-4/5 gap-4 flex-wrap">
+            {/* <div className="left-section justify-center flex basis-4/5 gap-4 flex-wrap"> */}
 
                 <div className="post-parent mt-3">
                     <div className="post-img">
@@ -28,7 +28,7 @@ const Post = (props) => {
                 </div>
 
 
-            </div>
+            {/* </div> */}
 
 
             {/* right section */}
@@ -71,7 +71,9 @@ const Post = (props) => {
                 <div id="lbb"></div>
                 </div>
             </div> */}
-        </div>
+        {/* </div> */}
+
+        </>
     )
 }
 
