@@ -8,7 +8,7 @@ const CreatePost = () => {
 
     const navigator = useNavigate()
     const [handlePost, setHandlePost] = useState({
-         title: "", description: "", category: ""
+         title: "", description: "", category: "", tags:""
     })
     const [img, setImg] = useState(null)
 
@@ -26,6 +26,7 @@ console.log("form data", handlePost)
         formData.append('title', handlePost.title);
         formData.append('description', handlePost.description);
         formData.append('category', handlePost.category);
+        formData.append('tags', handlePost.tags);
         // console.log("full form data",formData)
         try {
             const response = await axios.post(`http://localhost:3000/api/post/create`, formData, {
@@ -75,6 +76,20 @@ console.log("form data", handlePost)
                                 onChange={handlePostMessage}
                                 value={handlePost.title}
                                 name="title"
+                                placeholder="Enter your image title here"
+                                className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-orange-500 focus:border-orange-300"
+                            />
+                        </div>
+                            <div className="mb-4">
+                            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                                Image Tags
+                            </label>
+                            <input
+                                type="text"
+                                id="title"
+                                onChange={handlePostMessage}
+                                value={handlePost.tags}
+                                name="tags"
                                 placeholder="Enter your image title here"
                                 className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-orange-500 focus:border-orange-300"
                             />

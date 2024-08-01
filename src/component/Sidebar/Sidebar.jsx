@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 
 const Sidebarcomp = () => {
     const {userData, setUserData} = useContext(UserContext)
+    console.log("user data is: " + userData)
     function handleLogout () {
         console.log("User logged out")
         setUserData({
@@ -15,7 +16,6 @@ const Sidebarcomp = () => {
         })
         toast.success("Logged out successfully")
     }
-    console.log("user data is: " + userData)
 
     return (
         <div className="h-[45%] w-[200px] px-4 py-4 bg-black absolute">
@@ -25,10 +25,13 @@ const Sidebarcomp = () => {
                     {/* <p className="text-white text-xl cursor-pointer hover:bg-orange-500 px-2 py-1 rounded-md">User</p> */}
                     <Tooltip username={userData.username} email={userData.email} usertype={userData.usertype}/>
                 </div> 
-                <div className="flex gap-4 items-center">
+                
+                {
+                    (userData.username) ? <div className="flex gap-4 items-center">
                     <i className="fa-solid fa-plus  text-2xl text-orange-500"></i>
                     <Link to={"/post/create"} className="text-white text-xl cursor-pointer hover:bg-[#545454] px-2 py-1 rounded-md">Create Post</Link>
-                </div>
+                </div> : ""
+                }
                 <div className="flex gap-4 items-center">
                     <i className="fa-solid fa-house  text-xl text-orange-500"></i>
                     <p className="text-white text-xl cursor-pointer hover:bg-[#545454] px-2 py-1 rounded-md">All Post</p>

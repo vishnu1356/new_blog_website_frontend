@@ -9,7 +9,7 @@ function App() {
 
   // Here you can add your user data
 
-  const [userData, setUserData] = useState({username:"", email: "", usertype: "", id: ""})
+  const [userData, setUserData] = useState({username:"", email: "", usertype: "", id: "",})
 
 
   return (

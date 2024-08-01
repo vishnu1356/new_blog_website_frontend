@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../../contex/user";
 
 const Post = (props) => {
-    const {img, title, description, id} = props;
+    const {img, title, description, id, publishedDate} = props;
+    const {userData, setUserData} = useContext(UserContext)
 
     return (
         <>
@@ -20,10 +23,10 @@ const Post = (props) => {
                         <div className="user-img-parent">
                             <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
                         </div>
-                        <p className="text-sm">UserName</p>
+                        <p className="text-sm">{userData.username}</p>
                     </div>
                     <div className="text-sm">
-                        Published: October 4, 2023
+                        Published: {publishedDate}
                     </div>
                 </div>
 
