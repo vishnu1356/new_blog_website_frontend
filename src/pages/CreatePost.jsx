@@ -1,15 +1,18 @@
 import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 
 const CreatePost = () => {
+
+    const navigator = useNavigate()
     const [handlePost, setHandlePost] = useState({
          title: "", description: "", category: ""
     })
     const [img, setImg] = useState(null)
 
-
+console.log("form data", handlePost)
     function handlePostMessage (e) {
         const {name, value} = e.target;
         setHandlePost({...handlePost, [name]: value })
@@ -35,7 +38,7 @@ const CreatePost = () => {
                 title: "", description: "", category: ""
            })
             toast.success('Image uploaded successfully!');
-            // navigator("/")
+            navigator("/")
         } catch (error) {
             console.log("error caught by handleCreatePostData Submit",error)
             toast.error("Something Went Wrong!")
@@ -90,7 +93,7 @@ const CreatePost = () => {
                                 className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-orange-500 focus:border-orange-300"
                             />
                         </div>
-                        <div className="mb-6">
+                        {/* <div className="mb-6">
                             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
                                 Image Category
                             </label>
@@ -103,7 +106,25 @@ const CreatePost = () => {
                                 placeholder="Enter category of image"
                                 className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-orange-500 focus:border-orange-300"
                             />
-                        </div>
+                        </div> */}
+                        <div className="mb-6">
+                            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="category">
+                                Image Category
+                            </label>
+                            <select
+                                id="category"
+                                value={handlePost.category}
+                                onChange={(e) => setHandlePost({...handlePost, category: e.target.value})}
+                                className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-orange-500 focus:border-orange-300"
+                                required
+                            >   
+                                <option value="" disabled>Select a Category</option>
+                                <option value="money">Money</option>
+                                <option value="health">Health</option>
+                                <option value="gaming">Gaming</option>
+                                <option value="technology">Technology</option>
+                            </select>
+                            </div>
                         <div className="flex items-center justify-between mb-4">
                             <button
                                 type="submit"
