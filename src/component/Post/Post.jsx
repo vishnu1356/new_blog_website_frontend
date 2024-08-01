@@ -1,5 +1,9 @@
 
-const Post = () => {
+const Post = (props) => {
+    const {img, title, description, id} = props;
+    console.log("base url is:", import.meta.env.VITE_IMG_URL)
+    console.log("id is", id)
+    console.log(` full url for image: ${import.meta.env.VITE_IMG_URL}${id}`)
     return (
         <div className="flex  flex-row justify-around gap-12  bg-gray-200">
 
@@ -8,9 +12,9 @@ const Post = () => {
 
                 <div className="post-parent mt-3">
                     <div className="post-img">
-                        <img src="https://media.istockphoto.com/id/1147822631/photo/skyline-of-downtown-frankfurt-am-main-germany.jpg?s=1024x1024&w=is&k=20&c=gb8X9TS0LfCTvwnSPGWz2nJhyPChbSvDP4BPdSbkdO0=" alt="" />
+                        <img src={`${import.meta.env.VITE_IMG_URL}${id}`} alt="post image" />
                     </div>
-                    <p className="mt-2 font-semibold hover:text-orange-500 leading-5 mb-4 cursor-pointer">Rabit is building an AI Model that understands how software works.</p>
+                    <p className="mt-2 font-semibold hover:text-orange-500 leading-5 mb-4 cursor-pointer">{title}</p>
                     <div className="user-parent">
                         <div className="user-img-parent">
                             <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
@@ -21,102 +25,13 @@ const Post = () => {
                         Published: October 4, 2023
                     </div>
                 </div>
-                <div className="post-parent mt-3">
-                    <div className="post-img">
-                        <img src="https://media.istockphoto.com/id/1147822631/photo/skyline-of-downtown-frankfurt-am-main-germany.jpg?s=1024x1024&w=is&k=20&c=gb8X9TS0LfCTvwnSPGWz2nJhyPChbSvDP4BPdSbkdO0=" alt="" />
-                    </div>
-                    <p className="mt-2 font-semibold hover:text-orange-500 cursor-pointer">Rabit is building an AI Model that understands how software works.</p>
-                    <div className="user-parent">
-                        <div className="user-img-parent">
-                            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
-                        </div>
-                        <p>UserName</p>
-                    </div>
-                    <div>
-                        Published: October 4, 2023
-                    </div>
-                </div>
-                <div className="post-parent mt-3">
-                    <div className="post-img">
-                        <img src="https://media.istockphoto.com/id/1147822631/photo/skyline-of-downtown-frankfurt-am-main-germany.jpg?s=1024x1024&w=is&k=20&c=gb8X9TS0LfCTvwnSPGWz2nJhyPChbSvDP4BPdSbkdO0=" alt="" />
-                    </div>
-                    <p className="mt-2 font-semibold hover:text-orange-500 cursor-pointer">Rabit is building an AI Model that understands how software works.</p>
-                    <div className="user-parent">
-                        <div className="user-img-parent">
-                            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
-                        </div>
-                        <p>UserName</p>
-                    </div>
-                    <div>
-                        Published: October 4, 2023
-                    </div>
-                </div>
-                <div className="post-parent mt-3">
-                    <div className="post-img">
-                        <img src="https://media.istockphoto.com/id/1147822631/photo/skyline-of-downtown-frankfurt-am-main-germany.jpg?s=1024x1024&w=is&k=20&c=gb8X9TS0LfCTvwnSPGWz2nJhyPChbSvDP4BPdSbkdO0=" alt="" />
-                    </div>
-                    <p className="mt-2 font-semibold hover:text-orange-500 cursor-pointer">Rabit is building an AI Model that understands how software works.</p>
-                    <div className="user-parent">
-                        <div className="user-img-parent">
-                            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
-                        </div>
-                        <p>UserName</p>
-                    </div>
-                    <div>
-                        Published: October 4, 2023
-                    </div>
-                </div>
-                <div className="post-parent mt-3">
-                    <div className="post-img">
-                        <img src="https://media.istockphoto.com/id/1147822631/photo/skyline-of-downtown-frankfurt-am-main-germany.jpg?s=1024x1024&w=is&k=20&c=gb8X9TS0LfCTvwnSPGWz2nJhyPChbSvDP4BPdSbkdO0=" alt="" />
-                    </div>
-                    <p className="mt-2 font-semibold hover:text-orange-500 cursor-pointer">Rabit is building an AI Model that understands how software works.</p>
-                    <div className="user-parent">
-                        <div className="user-img-parent">
-                            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
-                        </div>
-                        <p>UserName</p>
-                    </div>
-                    <div>
-                        Published: October 4, 2023
-                    </div>
-                </div>
-                <div className="post-parent mt-3">
-                    <div className="post-img">
-                        <img src="https://media.istockphoto.com/id/1147822631/photo/skyline-of-downtown-frankfurt-am-main-germany.jpg?s=1024x1024&w=is&k=20&c=gb8X9TS0LfCTvwnSPGWz2nJhyPChbSvDP4BPdSbkdO0=" alt="" />
-                    </div>
-                    <p className="mt-2 font-semibold hover:text-orange-500 cursor-pointer">Rabit is building an AI Model that understands how software works.</p>
-                    <div className="user-parent">
-                        <div className="user-img-parent">
-                            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
-                        </div>
-                        <p>UserName</p>
-                    </div>
-                    <div>
-                        Published: October 4, 2023
-                    </div>
-                </div>
-                <div className="post-parent mt-3">
-                    <div className="post-img">
-                        <img src="https://media.istockphoto.com/id/1147822631/photo/skyline-of-downtown-frankfurt-am-main-germany.jpg?s=1024x1024&w=is&k=20&c=gb8X9TS0LfCTvwnSPGWz2nJhyPChbSvDP4BPdSbkdO0=" alt="" />
-                    </div>
-                    <p className="mt-2 font-semibold hover:text-orange-500 cursor-pointer">Rabit is building an AI Model that understands how software works.</p>
-                    <div className="user-parent">
-                        <div className="user-img-parent">
-                            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
-                        </div>
-                        <p>UserName</p>
-                    </div>
-                    <div>
-                        Published: October 4, 2023
-                    </div>
-                </div>
+
 
             </div>
 
 
             {/* right section */}
-            <div className="right-section flex flex-col items-center ">
+            {/* <div className="right-section flex flex-col items-center ">
                 <h1 className="text-3xl mb-4 mt-6">Latest Blog</h1>
                 <div>
                     <div>
@@ -154,7 +69,7 @@ const Post = () => {
                     </div>
                 <div id="lbb"></div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
