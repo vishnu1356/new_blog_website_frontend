@@ -1,5 +1,24 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const PostDetail = () =>  {
+    const [singleBlog, setSingleBlog] = useState([]);
+    const {id}  = useParams();
+
+    async function fetchSingleBlog() {
+        try {
+            const response = await axios.get(`http://localhost:3000/api/single/${id}`);
+            console.log("response of single posts ", response)
+            setSingleBlog(response.data);
+        } catch (error) {
+            console.log("error caught by fetchBlogs", error);
+        }
+    }
+
+    useEffect(() => {
+        fetchSingleBlog()
+    }, [])
     return (
         <section className="detail-page">
             <div className="card-detail">

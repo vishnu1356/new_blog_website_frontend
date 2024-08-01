@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Post = (props) => {
     const {img, title, description, id} = props;
@@ -14,7 +15,7 @@ const Post = (props) => {
                     <div className="post-img">
                         <img src={`${import.meta.env.VITE_IMG_URL}${id}`} alt="post image" />
                     </div>
-                    <p className="mt-2 font-semibold hover:text-orange-500 leading-5 mb-4 cursor-pointer">{title}</p>
+                    <Link to={`/post/${id}`} className="mt-2 font-semibold hover:text-orange-500 leading-5 mb-4 cursor-pointer">{title}</Link>
                     <div className="user-parent">
                         <div className="user-img-parent">
                             <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
