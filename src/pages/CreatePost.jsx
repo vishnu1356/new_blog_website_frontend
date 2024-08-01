@@ -1,12 +1,53 @@
+import axios from "axios";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
 
 const CreatePost = () => {
+    const [handlePost, setHandlePost] = useState({
+         title: "", description: "", category: ""
+    })
+    const [img, setImg] = useState(null)
+
+
+    function handlePostMessage (e) {
+        const {name, value} = e.target;
+        setHandlePost({...handlePost, [name]: value })
+    }
+
+
+    async function handleCreatePostData (e) {
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append('img', img);
+        formData.append('title', handlePost.title);
+        formData.append('description', handlePost.description);
+        formData.append('category', handlePost.category);
+        // console.log("full form data",formData)
+        try {
+            const response = await axios.post(`http://localhost:3000/api/post/create`, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                    // Authorization: 'Bearer your_token_here' // Add any other headers as needed
+                }
+            })
+            setHandlePost({
+                title: "", description: "", category: ""
+           })
+            toast.success('Image uploaded successfully!');
+            // navigator("/")
+        } catch (error) {
+            console.log("error caught by handleCreatePostData Submit",error)
+            toast.error("Something Went Wrong!")
+        }
+
+    }
     return (
         <>
             <div className="min-h-screen flex items-center justify-center bg-gray-100 mt-10 mb-10">
                 <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
                     <h2 className="text-2xl font-bold mb-6 text-center">Create Post Here</h2>
-                    <form>
+                    <form onSubmit={handleCreatePostData}>
 
                         <div className="mb-4">
                             <label className="block  text-sm font-bold mb-2" htmlFor="image">
@@ -16,6 +57,7 @@ const CreatePost = () => {
                                 type="file"
                                 id="image"
                                 accept="image/*"
+                                onChange={(e) => setImg(e.target.files[0])}
                                 className="w-full px-3 py-2 outline-none border rounded focus:outline-none focus:ring-orange-500 focus:border-orange-300"
                             />
                         </div>
@@ -27,7 +69,9 @@ const CreatePost = () => {
                             <input
                                 type="text"
                                 id="title"
-
+                                onChange={handlePostMessage}
+                                value={handlePost.title}
+                                name="title"
                                 placeholder="Enter your image title here"
                                 className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-orange-500 focus:border-orange-300"
                             />
@@ -39,7 +83,9 @@ const CreatePost = () => {
                             <textarea
                                 type="text"
                                 id="description"
-
+                                onChange={handlePostMessage}
+                                value={handlePost.description}
+                                name="description"
                                 placeholder="Describe about you post here"
                                 className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-orange-500 focus:border-orange-300"
                             />
@@ -51,7 +97,9 @@ const CreatePost = () => {
                             <input
                                 type="text"
                                 id="category"
-
+                                onChange={handlePostMessage}
+                                value={handlePost.category}
+                                name="category"
                                 placeholder="Enter category of image"
                                 className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-orange-500 focus:border-orange-300"
                             />
