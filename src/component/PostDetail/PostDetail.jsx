@@ -1,16 +1,29 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import toast from "react-hot-toast";
+import { useNavigate, useParams } from "react-router-dom";
 
 const PostDetail = () =>  {
     const [singleBlog, setSingleBlog] = useState([]);
     const {id}  = useParams();
+    const navigator = useNavigate()
 
     async function fetchSingleBlog() {
         try {
             const response = await axios.get(`http://localhost:3000/api/single/${id}`);
             console.log("response of single posts ", response)
             setSingleBlog(response.data);
+        } catch (error) {
+            console.log("error caught by fetchBlogs", error);
+        }
+    }
+
+    async function handleDeletePost () {
+        try {
+            const response = await axios.delete(`http://localhost:3000/api/posts/${id}`)
+            console.log(response.data.message)
+            toast.success(response.data.message)
+            navigator("/")
         } catch (error) {
             console.log("error caught by fetchBlogs", error);
         }
@@ -28,7 +41,7 @@ const PostDetail = () =>  {
                 </div>
                 <div className="flex justify-between mt-4">
                     <button className="px-4 py-2 bg-orange-500 rounded-md"><i className="fa-solid fa-pen-to-square"></i></button>
-                    <button className="px-4 py-2 bg-orange-500 rounded-md"><i className="fa-solid fa-delete-left"></i></button>
+                    <button onClick={handleDeletePost} className="px-4 py-2 bg-orange-500 rounded-md"><i className="fa-solid fa-delete-left"></i></button>
                 </div>
                 <p className="mt-8 text-justify">{singleBlog.description}</p>
             </div>
