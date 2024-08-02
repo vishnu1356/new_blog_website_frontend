@@ -21,7 +21,7 @@ const Post = (props) => {
                     <Link to={`/post/${id}`} className="mt-2 font-semibold hover:text-orange-500 leading-5 mb-4 cursor-pointer">{title}</Link>
                     <div className="user-parent">
                         <div className="user-img-parent">
-                            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
+                            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="user" />
                         </div>
                         <p className="text-sm">{userData.username}</p>
                     </div>

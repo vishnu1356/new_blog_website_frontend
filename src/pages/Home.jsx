@@ -17,6 +17,7 @@ const Home = () => {
     async function fetchBlogs() {
         try {
             const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/posts`);
+            console.log("response from all blogs", response)
             setAllBlogs(response.data);
             setFilterBlogs(response.data);
         } catch (error) {
