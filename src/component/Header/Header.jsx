@@ -5,15 +5,16 @@ import "./Header.css";
 import Sidebarcomp from "../Sidebar/Sidebar";
 import { useContext, useState } from "react";
 import UserContext from "../../contex/user";
+import InputSearch from "../../contex/searchtext";
 
 function Header() {
 
   const [isOpen, setIsOPen] = useState(false)
+  const {inputData, setInputData} =  useContext(InputSearch)
   
   const {userData, setUserData} = useContext(UserContext)
 
 
-  console.log("userData from header", userData.username.length)
   return (
     <>
       <header className="bg-black ">
@@ -26,6 +27,7 @@ function Header() {
           <div>
           <input
             type="text"
+            onChange={(e) => setInputData(e.target.value)}
             placeholder="Enter Post title"
             className="border border-gray-300 rounded-md py-2 px-4 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
           />
