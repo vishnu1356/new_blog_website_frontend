@@ -28,8 +28,9 @@ console.log("form data", handlePost)
         formData.append('category', handlePost.category);
         formData.append('tags', handlePost.tags);
         // console.log("full form data",formData)
+        console.log("base url is", import.meta.env.VITE_BASE_URL)
         try {
-            const response = await axios.post(`http://localhost:3000/api/post/create`, formData, {
+            const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/api/post/create`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                     // Authorization: 'Bearer your_token_here' // Add any other headers as needed

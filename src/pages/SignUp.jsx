@@ -20,7 +20,7 @@ const SignUp = () => {
   async function handleSubmitData (e) {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/user/signup', signupFormData, {
+      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/api/user/signup`, signupFormData, {
         headers: {'Content-Type': 'application/json'},
       })
       toast.success(response.data.message)

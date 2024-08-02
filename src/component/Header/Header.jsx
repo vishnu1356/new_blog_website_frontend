@@ -17,7 +17,7 @@ function Header() {
 
   return (
     <>
-      <header className="bg-black ">
+      <header className="bg-black sticky top-0">
       <nav className="px-4 py-4 flex justify-between items-center">
         {/* Left Part */}
         <div className="flex gap-8 items-center">

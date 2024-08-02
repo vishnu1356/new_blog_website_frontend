@@ -26,7 +26,7 @@ const Login = () => {
        
         e.preventDefault();
         try {
-          const response = await axios.post('http://localhost:3000/api/user/signin', loginFormData, {
+          const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/api/user/signin`, loginFormData, {
             headers: {
               'Content-Type': 'application/json'
             }

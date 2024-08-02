@@ -23,7 +23,7 @@ const PostDetail = () =>  {
 
     async function handleDeletePost () {
         try {
-            const response = await axios.delete(`http://localhost:3000/api/posts/${id}`)
+            const response = await axios.delete(`${import.meta.env.VITE_BASE_URL}/api/posts/${id}`)
             console.log(response.data.message)
             toast.success(response.data.message)
             navigator("/")

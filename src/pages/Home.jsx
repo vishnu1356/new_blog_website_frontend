@@ -13,12 +13,10 @@ const Home = () => {
     const [filterBlogs, setFilterBlogs] = useState([]);
     const {inputData, setInputData} =  useContext(InputSearch)
 
-    console.log("input search text: " + inputData)
-
+    console.log("base url is", import.meta.env.VITE_BASE_URL)
     async function fetchBlogs() {
         try {
-            const response = await axios.get(`http://localhost:3000/api/posts`);
-            console.log("response of all posts ", response)
+            const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/posts`);
             setAllBlogs(response.data);
             setFilterBlogs(response.data);
         } catch (error) {
@@ -31,7 +29,6 @@ const Home = () => {
         setFilterBlogs(response)
     }
 
-    console.log("filter blog are", filterBlogs)
     useEffect(() => {
         fetchFilterBlog()
     }, [inputData])

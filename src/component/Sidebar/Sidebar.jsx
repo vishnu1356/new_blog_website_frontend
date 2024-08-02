@@ -34,7 +34,7 @@ const Sidebarcomp = () => {
                 }
                 <div className="flex gap-4 items-center">
                     <i className="fa-solid fa-house  text-xl text-orange-500"></i>
-                    <p className="text-white text-xl cursor-pointer hover:bg-[#545454] px-2 py-1 rounded-md">All Post</p>
+                    <Link to={"/"} className="text-white text-xl cursor-pointer hover:bg-[#545454] px-2 py-1 rounded-md">All Post</Link>
                 </div> 
                    <div className="flex gap-4 items-center">
                    <i className="fa-solid fa-right-from-bracket text-xl text-orange-500"></i>
