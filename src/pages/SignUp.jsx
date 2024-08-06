@@ -23,6 +23,7 @@ const SignUp = () => {
       const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/api/user/signup`, signupFormData, {
         headers: {'Content-Type': 'application/json'},
       })
+      console.log("response:", response)
       toast.success(response.data.message)
       navigaor("/signin")
       setSignupFormData({

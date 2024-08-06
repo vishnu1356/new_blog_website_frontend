@@ -12,7 +12,7 @@ const PostDetail = () =>  {
     console.log("all tags",allTags)
     async function fetchSingleBlog() {
         try {
-            const response = await axios.get(`http://localhost:3000/api/single/${id}`);
+            const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/single/${id}`);
             console.log("response of single posts ", response)
             setSingleBlog(response.data);
             setAllTags(response.data.tags)
