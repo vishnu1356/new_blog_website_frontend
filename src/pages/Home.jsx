@@ -37,7 +37,7 @@ const Home = () => {
     useEffect(() => {
         fetchBlogs()
     }, [])
-
+    
     return (
         <div>
             <HeroSection />

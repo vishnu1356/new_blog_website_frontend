@@ -6,6 +6,8 @@ const Post = (props) => {
     const {img, title, description, id, publishedDate} = props;
     const {userData, setUserData} = useContext(UserContext)
 
+
+    
     return (
         <>
 
@@ -14,9 +16,10 @@ const Post = (props) => {
             {/* left section */}
             {/* <div className="left-section justify-center flex basis-4/5 gap-4 flex-wrap"> */}
 
+            
                 <div className="post-parent mt-3">
                     <div className="post-img">
-                        <img src={`${import.meta.env.VITE_IMG_URL}${id}`} alt="post image" />
+                        <img src={`${import.meta.env.VITE_IMG_URL}/${id}`} alt="post image" />
                     </div>
                     <Link to={`/post/${id}`} className="mt-2 font-semibold hover:text-orange-500 leading-5 mb-4 cursor-pointer">{title}</Link>
                     <div className="user-parent">

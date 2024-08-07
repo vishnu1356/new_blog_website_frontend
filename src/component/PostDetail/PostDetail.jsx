@@ -42,7 +42,7 @@ const PostDetail = () =>  {
                 <div className="card-detail">
                     <h1 className="mb-4 text-3xl font-semibold ">{singleBlog.title}...</h1>
                     <div>
-                        <img src={`${import.meta.env.VITE_IMG_URL}${id}`} alt="detail page" />
+                        <img src={`${import.meta.env.VITE_IMG_URL}/${id}`} alt="detail page" />
                     </div>
                     <div className="flex justify-between mt-4">
                         <button className="px-4 py-2 bg-orange-500 rounded-md"><i className="fa-solid fa-pen-to-square"></i></button>
