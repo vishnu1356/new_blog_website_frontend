@@ -9,7 +9,7 @@ const PostDetail = () =>  {
     const {id}  = useParams();
     const navigator = useNavigate()
 
-    console.log("all tags",allTags)
+    // console.log("all tags",allTags)
     async function fetchSingleBlog() {
         try {
             const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/single/${id}`);

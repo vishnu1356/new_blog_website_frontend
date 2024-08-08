@@ -1,15 +1,20 @@
 
+import axios from "axios"
 import  "../../App.css"
 
-const Category = () => {
+const Category = (props) => {
+
+
+
+
     return (
         <div>
             <div className="flex gap-12  justify-center mt-12 cursor-pointer text-xl font-semibold">
-                <p className="hover:text-orange-500">All</p>
-                <p className="hover:text-orange-500">Money</p>
-                <p className="hover:text-orange-500">Health</p>
-                <p className="hover:text-orange-500">Gaming</p>
-                <p className="hover:text-orange-500">Technology</p>
+                <p onClick={() => props.fethAllData()} className="hover:text-orange-500">All</p>
+                <p onClick={() => props.fethData("money")} className="hover:text-orange-500">Money</p>
+                <p onClick={() => props.fethData("health")} className="hover:text-orange-500">Health</p>
+                <p onClick={() => props.fethData("gaming")} className="hover:text-orange-500">Gaming</p>
+                <p onClick={() => props.fethData("technology")} className="hover:text-orange-500">Technology</p>
             </div>
         <div id="bbt" className="border border-b border-black mt-8"></div>
         </div>

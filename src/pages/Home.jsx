@@ -11,9 +11,8 @@ const Home = () => {
 
     const [allBlogs, setAllBlogs] = useState([]);
     const [filterBlogs, setFilterBlogs] = useState([]);
-    const {inputData, setInputData} =  useContext(InputSearch)
+    const {inputData, setInputData} =  useContext(InputSearch);
 
-    console.log("base url is", import.meta.env.VITE_BASE_URL)
     async function fetchBlogs() {
         try {
             const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/posts`);
@@ -30,6 +29,18 @@ const Home = () => {
         setFilterBlogs(response)
     }
 
+
+    async function fetchDataFromCategory(name) {
+        // console.log("function called and categroy is", name)
+        try {
+            const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/filter?category=${name}`)
+            console.log("Response from category ", response.data)
+            setFilterBlogs(response.data);
+        } catch (error) {
+            console.log("Error caught by fetchDataFromCategory", error)
+        }
+    }
+
     useEffect(() => {
         fetchFilterBlog()
     }, [inputData])
@@ -41,7 +52,9 @@ const Home = () => {
     return (
         <div>
             <HeroSection />
-            <Category />
+            <Category fethData={(name) => fetchDataFromCategory(name)}
+                      fethAllData={() => fetchBlogs()}
+                />
             <div className="flex justify-center g-12 flex-wrap">
                 {
                     filterBlogs && filterBlogs.map((blog) => (
