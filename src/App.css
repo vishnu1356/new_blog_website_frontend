@@ -12,7 +12,7 @@
 } */
 
 .post-parent {
-    height: 320px;
+    height: 330px;
     width: 350px;
     padding: 10px;
     background-color: white;
@@ -95,7 +95,26 @@
     .inp {
       display: none;
     }
-  
+    
+    .post-parent {
+      height: 280px;
+      width: 250px;
+
+    }
+
+    .post-img {
+      height: 150px;
+      width: 200px;
+      margin: 0 auto;
+    }
+
+
+    /* .post-img  > img {
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+    }
+   */
   }
   
   /* Small devices (portrait tablets and small desktops, 576px and up) */

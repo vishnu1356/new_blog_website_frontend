@@ -1,0 +1,40 @@
+
+#faq-title {
+    font-size: 2.3rem;
+    margin: 10vh auto;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.faq-parent {
+    width: 50%;
+    border: 1px solid black;
+    margin: 3vh auto;
+    border-radius: 5px;
+}
+
+.faq-upper {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    align-items: center;
+}
+
+.faq-upper p {
+    cursor: pointer;
+
+}
+
+.faq-upper p:hover {
+    color: rgba(255, 68, 0, 0.911);
+}
+
+
+.faq-lower {
+    padding: 15px;
+    background-color: whitesmoke;
+    justify-content: center;
+}

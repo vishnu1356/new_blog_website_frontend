@@ -6,12 +6,21 @@ import Post from "../component/Post/Post";
 import { useEffect } from "react";
 import axios from "axios";
 import InputSearch from "../contex/searchtext";
+import Questionanswer from "../component/FAQ's/Faq";
 
 const Home = () => {
 
     const [allBlogs, setAllBlogs] = useState([]);
     const [filterBlogs, setFilterBlogs] = useState([]);
     const {inputData, setInputData} =  useContext(InputSearch);
+
+    const faqdata = [
+        { question: "How much is your fee", answer: "We are always here to help you with any questions you may have about our blog. Feel free to ask your questions below." },
+        { question: "How much is your fee", answer: "We are always here to help you with any questions you may have about our blog. Feel free to ask your questions below." },
+        { question: "How much is your fee", answer: "We are always here to help you with any questions you may have about our blog. Feel free to ask your questions below." },
+        { question: "How much is your fee", answer: "We are always here to help you with any questions you may have about our blog. Feel free to ask your questions below." },
+        { question: "How much is your fee", answer: "We are always here to help you with any questions you may have about our blog. Feel free to ask your questions below." },
+    ]
 
     async function fetchBlogs() {
         try {
@@ -65,7 +74,12 @@ const Home = () => {
                 }
 
             </div>
- 
+            <h1 id="faq-title">Frequently Asked Questions</h1>
+            {
+                faqdata.map((faq, index) => (
+                    <Questionanswer key={index} question={faq.question} answer={faq.answer} />
+                ))
+            }
             <NewsLetter  />
         </div>
     )
