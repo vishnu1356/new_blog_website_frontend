@@ -17,7 +17,7 @@ function Header() {
 
   return (
     <>
-      <header className="bg-black sticky top-0">
+      <header className="bg-black sticky top-0 z-50">
       <nav className="px-4 py-4 flex justify-between items-center">
         {/* Left Part */}
         <div className="flex gap-8 items-center">
@@ -29,7 +29,7 @@ function Header() {
             type="text"
             onChange={(e) => setInputData(e.target.value)}
             placeholder="Enter Post title"
-            className="border border-gray-300 rounded-md py-2 px-4 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+            className="inp border border-gray-300 rounded-md py-2 px-4 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
           />
           </div>
         </div>

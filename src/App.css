@@ -89,6 +89,9 @@
     .icon{
       display: block!important;
     }
+    .inp {
+      display: none;
+    }
   
   }
   
