@@ -55,7 +55,7 @@ const Home = () => {
             <Category fethData={(name) => fetchDataFromCategory(name)}
                       fethAllData={() => fetchBlogs()}
                 />
-            <div className="flex justify-center g-12 flex-wrap">
+            <div className="flex justify-center gap-8 flex-wrap">
                 {
                     filterBlogs && filterBlogs.map((blog) => (
                         <Post  key={blog._id} img={blog.img} id={blog._id} 

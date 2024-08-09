@@ -18,15 +18,15 @@ const Post = (props) => {
 
             
                 <div className="post-parent mt-3">
-                    <div className="post-img">
+                    <div className="post-img mb-2">
                         <img src={`${import.meta.env.VITE_IMG_URL}/${id}`} alt="post image" />
                     </div>
-                    <Link to={`/post/${id}`} className="mt-2 font-semibold hover:text-orange-500 leading-5 mb-4 cursor-pointer">{title}</Link>
+                    <Link to={`/post/${id}`} className="mt-2 text-xl flex justify-center font-semibold hover:text-orange-500 leading-5 mb-4 cursor-pointer">{title}</Link>
                     <div className="user-parent">
                         <div className="user-img-parent">
-                            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="user" />
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnSA1zygA3rubv-VK0DrVcQ02Po79kJhXo_A&s" alt="user" />
                         </div>
-                        <p className="text-sm">{userData.username}</p>
+                        <p className="text-sm">{(userData.username) ? userData.username : "Username"}</p>
                     </div>
                     <div className="text-sm">
                         Published: {publishedDate}
