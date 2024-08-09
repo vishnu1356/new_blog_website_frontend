@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 
 const Sidebarcomp = () => {
     const {userData, setUserData} = useContext(UserContext)
-    console.log("user data is: " + userData)
+    // console.log("user data is: " + userData)
     function handleLogout () {
         console.log("User logged out")
         setUserData({
@@ -18,7 +18,7 @@ const Sidebarcomp = () => {
     }
 
     return (
-        <div className="h-[45%] w-[200px] px-4 py-4 bg-black absolute">
+        <div className="sm:h-[45%] w-full h-full sm:w-[200px] px-4 py-4 bg-black absolute">
             <div className="flex justify-center flex-col gap-8">
                 <div className="flex gap-4 items-center">
                     <i className="fa-solid fa-user  text-xl text-orange-500"></i>

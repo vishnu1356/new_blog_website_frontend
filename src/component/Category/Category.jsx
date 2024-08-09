@@ -9,7 +9,7 @@ const Category = (props) => {
 
     return (
         <div>
-            <div className="flex gap-8 md:gap-12  justify-center flex-wrap mt-12 cursor-pointer text-xl font-semibold">
+            <div className="flex gap-8 md:gap-12  justify-center flex-wrap mt-12 cursor-pointer text-normal sm:text-xl font-semibold">
                 <p onClick={() => props.fethAllData()} className="hover:text-orange-500">All</p>
                 <p onClick={() => props.fethData("money")} className="hover:text-orange-500">Money</p>
                 <p onClick={() => props.fethData("health")} className="hover:text-orange-500">Health</p>
