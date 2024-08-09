@@ -8,17 +8,22 @@
   
   .tooltip-trigger {
     padding: 10px;
-    background-color: #545454;
-    color: white;
+    /* background-color: gray; */
+    color: black;
     border-radius: 5px;
     text-align: center;
     font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .tooltip-trigger:hover{
+    color: rgb(255,90, 31);
   }
   
   .tooltip-content {
     position: absolute;
-    background-color: #545454;
-    color: #fff;
+    background-color: whitesmoke;
+    color: black;
     padding: 15px;
     border-radius: 5px;
     left: 200%;
