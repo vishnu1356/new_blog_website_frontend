@@ -17,5 +17,8 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    "react/prop-types" : "off",
+    "simple-import-sort/imports": "error",
+    "semi":[1, "always"]
   },
 }

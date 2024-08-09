@@ -4,11 +4,11 @@ import { useContext } from "react";
 import UserContext from "../../contex/user";
 import toast from "react-hot-toast";
 
-const Sidebarcomp = () => {
+const Sidebarcomp = (props) => {
+    console.log("props from sidebarcomp", props);
     const {userData, setUserData} = useContext(UserContext)
-    // console.log("user data is: " + userData)
     function handleLogout () {
-        console.log("User logged out")
+        props.handleSidebar()
         setUserData({
             username: "",
             email: "",
@@ -18,9 +18,9 @@ const Sidebarcomp = () => {
     }
 
     return (
-        <div className="sm:h-[45%] w-full h-full sm:w-[200px] px-4 py-4 bg-black absolute">
+                    <div className=" w-full h-[45vh] sm:w-[200px] px-4 py-4 bg-gray-300  backdrop-blur-md top-18 left-0 z-50 fixed">
             <div className="flex justify-center flex-col gap-8">
-                <div className="flex gap-4 items-center">
+                <div className="flex gap-4 items-center"  onClick={() => props.handleSidebar()}>
                     <i className="fa-solid fa-user  text-xl text-orange-500"></i>
                     {/* <p className="text-white text-xl cursor-pointer hover:bg-orange-500 px-2 py-1 rounded-md">User</p> */}
                     <Tooltip username={userData.username} email={userData.email} usertype={userData.usertype}/>
@@ -29,20 +29,24 @@ const Sidebarcomp = () => {
                 {
                     (userData.username) ? <div className="flex gap-4 items-center">
                     <i className="fa-solid fa-plus  text-2xl text-orange-500"></i>
-                    <Link to={"/post/create"} className="text-white text-xl cursor-pointer hover:bg-[#545454] px-2 py-1 rounded-md">Create Post</Link>
+                    <Link to={"/post/create"}  onClick={() => props.handleSidebar()} className="text-white text-xl cursor-pointer hover:bg-[#545454] px-2 py-1 rounded-md">Create Post</Link>
                 </div> : ""
                 }
                 <div className="flex gap-4 items-center">
                     <i className="fa-solid fa-house  text-xl text-orange-500"></i>
-                    <Link to={"/"} className="text-white text-xl cursor-pointer hover:bg-[#545454] px-2 py-1 rounded-md">All Post</Link>
+                    <Link to={"/"} onClick={() => props.handleSidebar()} className="text-white text-xl cursor-pointer hover:bg-[#545454] px-2 py-1 rounded-md">All Post</Link>
                 </div> 
-                   <div className="flex gap-4 items-center">
-                   <i className="fa-solid fa-right-from-bracket text-xl text-orange-500"></i>
-                    <p onClick={handleLogout} className="text-white text-xl cursor-pointer hover:bg-[#545454] px-2 py-1 rounded-md">Log Out</p>
-                </div>
+                {
+                    (userData.username) ? <div className="flex gap-4 items-center">
+                    <i className="fa-solid fa-right-from-bracket text-xl text-orange-500"></i>
+                     <p onClick={handleLogout}  className="text-white text-xl cursor-pointer hover:bg-[#545454] px-2 py-1 rounded-md">Log Out</p>
+                 </div> : ""
+                }
+
             </div>
             
         </div>
+
     )
 }
 

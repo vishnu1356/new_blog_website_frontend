@@ -62,9 +62,11 @@ function Header() {
       </nav>
       <div id="bb"></div>
     </header>
-      {
-        (isOpen) ? <Sidebarcomp /> : ""
-      }
+
+          {
+            (isOpen) ? <Sidebarcomp handleSidebar={() => setIsOPen(!isOpen)}/> : ""
+          }
+
     </>
   )
 }

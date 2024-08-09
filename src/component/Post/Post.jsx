@@ -37,47 +37,7 @@ const Post = (props) => {
             {/* </div> */}
 
 
-            {/* right section */}
-            {/* <div className="right-section flex flex-col items-center ">
-                <h1 className="text-3xl mb-4 mt-6">Latest Blog</h1>
-                <div>
-                    <div>
-                        <p className=" w-[70%] mx-auto mb-2">Rainforest raises $8.5M to help software companies embed financial services, payment</p>
-                        <div className="  w-[70%] mx-auto">
-                            <button className="font-semibold cursor-pointer hover:text-orange-500">Read Now <i class="fa-solid fa-arrow-right"></i> </button>
-                        </div>
-                    </div>
-                <div id="lbb"></div>
-                </div>
-                <div>
-                    <div>
-                        <p className=" w-[70%] mx-auto mb-2">Rainforest raises $8.5M to help software companies embed financial services, payment</p>
-                        <div className="  w-[70%] mx-auto">
-                            <button className="font-semibold cursor-pointer hover:text-orange-500">Read Now <i class="fa-solid fa-arrow-right"></i> </button>
-                        </div>
-                    </div>
-                <div id="lbb"></div>
-                </div>
-                <div>
-                    <div>
-                        <p className=" w-[70%] mx-auto mb-2">Rainforest raises $8.5M to help software companies embed financial services, payment</p>
-                        <div className="  w-[70%] mx-auto">
-                            <button className="font-semibold cursor-pointer hover:text-orange-500">Read Now <i class="fa-solid fa-arrow-right"></i> </button>
-                        </div>
-                    </div>
-                <div id="lbb"></div>
-                </div>
-                <div>
-                    <div>
-                        <p className=" w-[70%] mx-auto mb-2">Rainforest raises $8.5M to help software companies embed financial services, payment</p>
-                        <div className="  w-[70%] mx-auto">
-                            <button className="font-semibold cursor-pointer hover:text-orange-500">Read Now <i class="fa-solid fa-arrow-right"></i> </button>
-                        </div>
-                    </div>
-                <div id="lbb"></div>
-                </div>
-            </div> */}
-        {/* </div> */}
+ 
 
         </>
     )
