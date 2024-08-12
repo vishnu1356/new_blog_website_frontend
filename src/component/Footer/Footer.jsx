@@ -6,7 +6,7 @@ const FooterSection = () => {
         <section class="relative overflow-hidden py-10">
             <div class="relative z-10 mx-auto max-w-7xl px-4">
                 <div class="-m-6 flex flex-wrap">
-                    <div class="w-full p-6 md:w-1/2 lg:w-5/12">
+                    <div class="w-full p-6 md:w-1/2 lg:w-5/12"  data-aos="fade-up-left">
                         <div class="flex h-full flex-col justify-between">
                             <div class="mb-4 inline-flex items-center">
                                 <svg
@@ -33,7 +33,7 @@ const FooterSection = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="w-full p-6 md:w-1/2 lg:w-2/12">
+                    <div class="w-full p-6 md:w-1/2 lg:w-2/12"  data-aos="fade-up-right">
                         <div class="h-full">
                             <h3 class="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
                                 Company
@@ -80,7 +80,7 @@ const FooterSection = () => {
                                 Support
                             </h3>
                             <ul>
-                                <li class="mb-4">
+                                <li class="mb-4"  data-aos="fade-down">
                                     <a
                                         class=" text-base font-medium text-gray-900 hover:text-gray-700"
                                         href="#"
@@ -88,7 +88,7 @@ const FooterSection = () => {
                                         Account
                                     </a>
                                 </li>
-                                <li class="mb-4">
+                                <li class="mb-4"  data-aos="fade-right">
                                     <a
                                         class=" text-base font-medium text-gray-900 hover:text-gray-700"
                                         href="#"
@@ -96,7 +96,7 @@ const FooterSection = () => {
                                         Help
                                     </a>
                                 </li>
-                                <li class="mb-4">
+                                <li class="mb-4"  data-aos="fade-left">
                                     <a
                                         class=" text-base font-medium text-gray-900 hover:text-gray-700"
                                         href="#"
@@ -104,7 +104,7 @@ const FooterSection = () => {
                                         Contact Us
                                     </a>
                                 </li>
-                                <li>
+                                <li  data-aos="fade-up-right">
                                     <a
                                         class=" text-base font-medium text-gray-900 hover:text-gray-700"
                                         href="#"
@@ -121,7 +121,7 @@ const FooterSection = () => {
                                 Legals
                             </h3>
                             <ul>
-                                <li class="mb-4">
+                                <li class="mb-4" data-aos="fade-up-left">
                                     <a
                                         class=" text-base font-medium text-gray-900 hover:text-gray-700"
                                         href="#"
@@ -129,7 +129,7 @@ const FooterSection = () => {
                                         Terms &amp; Conditions
                                     </a>
                                 </li>
-                                <li class="mb-4">
+                                <li class="mb-4"  data-aos="fade-up-left">
                                     <a
                                         class=" text-base font-medium text-gray-900 hover:text-gray-700"
                                         href="#"
@@ -137,7 +137,7 @@ const FooterSection = () => {
                                         Privacy Policy
                                     </a>
                                 </li>
-                                <li>
+                                <li  data-aos="fade-up-down">
                                     <a
                                         class=" text-base font-medium text-gray-900 hover:text-gray-700"
                                         href="#"

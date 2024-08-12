@@ -17,7 +17,7 @@ const Post = (props) => {
             {/* <div className="left-section justify-center flex basis-4/5 gap-4 flex-wrap"> */}
 
             
-                <div className="post-parent mt-3">
+                <div className="post-parent mt-3"  data-aos="flip-left">
                     <div className="post-img mb-2">
                         <img src={`${import.meta.env.VITE_IMG_URL}/${id}`} alt="post image" />
                     </div>

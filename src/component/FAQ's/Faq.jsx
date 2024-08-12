@@ -12,7 +12,7 @@ const Questionanswer = (props) => {
     return (
         <div>
 
-            <div className="faq-parent">
+            <div className="faq-parent"  data-aos="zoom-in-up">
                 <div className="faq-upper">
                     <h1>{question}</h1>
                     <p onClick={() => setOpen(!open)}>{(open) ? <FaMinus /> : <FaPlus />}</p>

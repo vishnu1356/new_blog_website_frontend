@@ -76,7 +76,7 @@ const Home = () => {
                 }
 
             </div>
-            <h1 id="faq-title" >Frequently Asked Questions</h1>
+            <h1 id="faq-title"  data-aos="flip-down">Frequently Asked Questions</h1>
             {
                 faqdata.map((faq, index) => (
                     <Questionanswer key={index} question={faq.question} answer={faq.answer} />

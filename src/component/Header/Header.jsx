@@ -20,7 +20,7 @@ function Header() {
       <header className="bg-black sticky top-0 z-50">
       <nav className="px-4 py-4 flex justify-between items-center">
         {/* Left Part */}
-        <div className="flex gap-8 items-center">
+        <div className="flex gap-8 items-center"  data-aos="fade-right"> 
           <div>
             <p href="/" className="text-xl font-bold text-white cursor-pointer" onClick={() => setIsOPen(!isOpen)}>Blog <span className="text-orange-500">Post</span></p>
           </div>
@@ -38,10 +38,10 @@ function Header() {
         {/* Middle Part */}
 
         <div className=" text-white gap-10 text-xl hidden lg:flex">
-          <Link to={"/"} className="hover:text-orange-500">Home</Link>
-          <p className="hover:text-orange-500">About</p>
-          <p className="hover:text-orange-500">Service</p>
-          <p className="hover:text-orange-500">Contact</p>
+          <Link to={"/"} className="hover:text-orange-500"  data-aos="flip-up">Home</Link>
+          <p className="hover:text-orange-500"   data-aos="flip-down">About</p>
+          <p className="hover:text-orange-500"  data-aos="flip-up">Service</p>
+          <p className="hover:text-orange-500"  data-aos="flip-down">Contact</p>
         </div>
 
 
@@ -50,7 +50,7 @@ function Header() {
         {/* Last Part */}
 
 
-        <div className="text-white  gap-4 items-center  hidden lg:flex">
+        <div className="text-white  gap-4 items-center  hidden lg:flex"  data-aos="fade-left">
           {
             (userData.username.length == 0) ? <Link to={"/signin"} className="px-4 py-2 bg-orange-500 rounded-md">Login</Link>
             : ""
