@@ -45,17 +45,13 @@ const PostDetail = () =>  {
                         <img src={`${import.meta.env.VITE_IMG_URL}/${id}`} alt="detail page" />
                     </div>
                     <div>
-                    {/* <div className="mt-4 mb-4 flex items-center">
-                        <p className="font-bold text-orange-500">Category:  <span className="bg-black font-normal text-white px-2 py-1 rounded-md">Health</span></p>
-                    </div> */}
+
                     <div className="flex gap-4 mt-4">
                         <p className="font-bold text-orange-500">Tags:</p>
                         {
                             allTags.map((tag, idx) => <p key={idx} className="bg-black text-white px-2 py-1 rounded-md">{tag}</p>)
                         }
-                        {/* <span className="bg-black text-white px-2 py-1 rounded-md">one</span>
-                        <span className="bg-black text-white px-2 py-1 rounded-md">one</span>
-                        <span className="bg-black text-white px-2 py-1 rounded-md">one</span> */}
+
                     </div>
                 </div>
                     <div className="flex justify-between mt-4">
@@ -69,26 +65,7 @@ const PostDetail = () =>  {
 
             </section>
 
-            {/* <div className="flex flex-col me-8">
 
-                <div className="h-[200px] mb-8 bg-slate-300 p-4 rounded-lg">
-                        <h1 className="text-3xl font-bold mb-4 text-center">Category Type</h1>
-                    <div className="flex gap-4 text-xl ">
-                        <p className="hover:bg-orange-500 rounded-lg px-4 py-2 text-2xl font-semibold">{singleBlog.category}</p>
-                        
-                    </div>
-                </div>
-                
-                <div className="h-[200px] bg-slate-300 p-4 rounded-lg">
-                    <h1 className="text-3xl font-bold mb-4 text-center">Popular Tags</h1>
-                <div className="flex gap-4 text-xl mx-4">
-                    {
-                        allTags.map((tag, idx) => <p key={idx} className=" rounded-lg px-4 py-2,  text-2xl font-bold">{tag}</p>)
-                    }
-                    
-                </div>
-                </div>
-            </div> */}
             
         </div>
     )

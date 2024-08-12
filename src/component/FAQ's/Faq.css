@@ -38,3 +38,25 @@
     background-color: whitesmoke;
     justify-content: center;
 }
+
+
+@media (max-width: 576px) {
+    #faq-title {
+        font-size: 1.1rem;
+        margin: 10vh auto;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    .faq-parent{
+        width: 80%;
+    }
+    .faq-upper h1 {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+    .faq-upper p {
+        font-size: 1rem;
+    }
+    
+}

@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import axios from "axios";
 import InputSearch from "../contex/searchtext";
 import Questionanswer from "../component/FAQ's/Faq";
+import "../App.css"
 
 const Home = () => {
 
@@ -74,7 +75,7 @@ const Home = () => {
                 }
 
             </div>
-            <h1 id="faq-title">Frequently Asked Questions</h1>
+            <h1 id="faq-title" >Frequently Asked Questions</h1>
             {
                 faqdata.map((faq, index) => (
                     <Questionanswer key={index} question={faq.question} answer={faq.answer} />
