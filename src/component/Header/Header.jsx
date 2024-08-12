@@ -57,7 +57,9 @@ function Header() {
           }
           <Link to={"/signup"} className="px-4 py-2 bg-orange-500 rounded-md">Signup</Link>
         </div>
-        <i className="fa-solid block icon fa-bars text-2xl text-white lg:hidden"></i>
+        {/* <i className="fa-solid block icon fa-bars text-2xl text-white lg:hidden"></i> */}
+        <Link to={"/signup"} className="px-4 py-2 text-white bg-orange-500 rounded-md lg:hidden">Signup</Link>
+
 
       </nav>
       <div id="bb"></div>
