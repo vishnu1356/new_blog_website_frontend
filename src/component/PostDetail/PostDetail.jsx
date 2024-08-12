@@ -38,10 +38,10 @@ const PostDetail = () =>  {
     return (
         <div className="flex justify-between items-center">
             
-            <section className="detail-page">
+            <section className="detail-page ">
                 <div className="card-detail">
-                    <h1 className="mb-4 text-3xl font-semibold ">{singleBlog.title}...</h1>
-                    <div className="mx-12 bg-blue-600">
+                    <h1 className="mb-4 text-normal sm:xl md:text-3xl font-semibold ">{singleBlog.title}...</h1>
+                    <div className="mx-12">
                         <img src={`${import.meta.env.VITE_IMG_URL}/${id}`} alt="detail page" />
                     </div>
                     <div>
