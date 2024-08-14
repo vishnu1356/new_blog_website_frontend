@@ -6,6 +6,7 @@ import Sidebarcomp from "../Sidebar/Sidebar";
 import { useContext, useState } from "react";
 import UserContext from "../../contex/user";
 import InputSearch from "../../contex/searchtext";
+import ScrollProgressBar from "../ScrollBar/Scrollbar";
 
 function Header() {
 
@@ -62,7 +63,8 @@ function Header() {
 
 
       </nav>
-      <div id="bb"></div>
+      {/* <div id="bb"></div> */}
+    <ScrollProgressBar/>
     </header>
 
           {
