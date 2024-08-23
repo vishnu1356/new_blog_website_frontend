@@ -40,7 +40,7 @@ function Header() {
 
         <div className=" text-white gap-10 text-xl hidden lg:flex">
           <Link to={"/"} className="hover:text-orange-500"  data-aos="flip-up">Home</Link>
-          <p className="hover:text-orange-500"   data-aos="flip-down">About</p>
+          <Link to={"/about"} className="hover:text-orange-500"   data-aos="flip-down">About</Link>
           <Link to={"/service"} className="hover:text-orange-500"  data-aos="flip-up">Service</Link>
           <p className="hover:text-orange-500"  data-aos="flip-down">Contact</p>
         </div>

@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import PostDetail from "../component/PostDetail/PostDetail";
 import CreatePost from "../pages/CreatePost";
 import Service from "../pages/Service";
+import About from "../pages/About";
 
 
 const AllRoutes = () => {
@@ -16,6 +17,7 @@ const AllRoutes = () => {
             <Route path="/post/create" element={<CreatePost />}/>
             <Route path="/post/:id" element={<PostDetail />}/>
             <Route path="/service" element={<Service />}/>
+            <Route path="/about" element={<About />}/>
         </Routes>
     )
 }
